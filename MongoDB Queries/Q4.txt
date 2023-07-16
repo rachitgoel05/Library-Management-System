@@ -1,4 +1,4 @@
-
+[
   {
     $bucket: {
       groupBy: "$year",
