@@ -1,0 +1,9 @@
+[
+  { $match: { "address.market": "Porto" } },
+  {
+    $group: {
+      _id: '$property_type',
+      avg: { $avg: '$price' },
+    },
+  },
+]

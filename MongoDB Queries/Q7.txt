@@ -1,0 +1,13 @@
+[
+    {
+      $geoNear: {
+        near: {
+          type: 'Point',
+          coordinates: [-8.61308, 41.1413]
+        },
+        distanceField: 'dist.calculated',
+        maxDistance: 10000
+      }
+    },
+    { $count: 'nearby_property_count' }
+  ]

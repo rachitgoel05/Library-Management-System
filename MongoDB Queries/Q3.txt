@@ -1,0 +1,10 @@
+[
+  {
+    $match: {
+      "imdb.rating": { $gt: 7 },
+      "imdb.votes": { $gte: 10 },
+      "tomatoes.viewer.numReviews": { $gte: 50 },
+      "tomatoes.viewer.rating": { $gt: 8 },
+    },
+  },
+]

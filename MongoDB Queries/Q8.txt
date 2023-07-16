@@ -1,0 +1,19 @@
+[
+  {
+    $unwind: "$grades",
+  },
+  {
+    $group: {
+      _id: "$name",
+      avg_grades: { $avg: "$grades.score" },
+    },
+  },
+  {
+    $sort: {
+      avg_grades: -1,
+    },
+  },
+  {
+    $limit: 5,
+  },
+]

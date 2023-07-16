@@ -1,0 +1,12 @@
+[
+  {
+    $unwind: "$countries",
+  },
+  {
+    $group:{
+      _id: "$countries",
+      count: {$sum: 1}
+    }, 
+  },
+  
+]
